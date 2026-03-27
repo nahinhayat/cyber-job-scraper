@@ -82,10 +82,10 @@ PORTAL_COMPANIES = [
     ),
     (
         "Morgan Stanley",
-        "https://www.morganstanley.com/people-opportunities/students-graduates/programs?q=cybersecurity",
-        ".job-title, h3",
-        ".location",
-        "a[href*='morganstanley.com']",
+        "https://morganstanley.eightfold.ai/careers?query=cybersecurity",
+        "[class*='job-title'], [class*='JobTitle'], h4, h3",
+        "[class*='location'], [class*='Location']",
+        "a[href*='/careers/jobs/']",
     ),
     (
         "Boeing",
@@ -196,10 +196,10 @@ PORTAL_COMPANIES = [
     ),
     (
         "Fortinet",
-        "https://www.fortinet.com/corporate/careers/search-jobs?keyword=cybersecurity",
+        "https://careers.fortinet.com/jobs/search?keywords=cybersecurity",
         ".job-title a, h3.title, [class*='title']",
         ".location, [class*='location']",
-        ".job-title a, a[href*='/careers/']",
+        ".job-title a, a[href*='/jobs/']",
     ),
     (
         "Qualcomm",
@@ -224,7 +224,7 @@ PORTAL_COMPANIES = [
     ),
     (
         "Intuit",
-        "https://jobs.intuit.com/search-jobs?keyword=cybersecurity",
+        "https://careers.intuit.com/job-search-results/?keyword=cybersecurity",
         ".job-title a, h2.title, [class*='JobTitle']",
         ".job-location, .location",
         ".job-title a",
@@ -238,7 +238,7 @@ PORTAL_COMPANIES = [
     ),
     (
         "Datadog",
-        "https://careers.datadoghq.com/jobs?q=cybersecurity",
+        "https://careers.datadoghq.com/all-jobs?search=cybersecurity",
         "h5.career-listing__title, h3, [class*='title']",
         ".career-listing__location, .location",
         "a[href*='/jobs/']",
@@ -261,10 +261,10 @@ PORTAL_COMPANIES = [
     ),
     (
         "American Express",
-        "https://jobs.americanexpress.com/jobs?q=cybersecurity",
+        "https://aexp.avature.net/careers/SearchJobs/cybersecurity",
         "h3.results-list__title a, .job-title a, h3",
         ".job-location, .location",
-        "h3.results-list__title a, a[href*='/jobs/']",
+        "h3.results-list__title a, a[href*='/careers/']",
     ),
     (
         "Citigroup",
@@ -343,8 +343,8 @@ def _scrape_portal(company_name, search_url, title_sel, loc_sel, link_sel):
         context = browser.new_context(user_agent=USER_AGENT)
         page = context.new_page()
         try:
-            page.goto(search_url, wait_until="networkidle", timeout=30000)
-            page.wait_for_timeout(2000)
+            page.goto(search_url, wait_until="domcontentloaded", timeout=60000)
+            page.wait_for_timeout(5000)
 
             # Try each title selector
             titles = []
@@ -359,7 +359,13 @@ def _scrape_portal(company_name, search_url, title_sel, loc_sel, link_sel):
             for sel in loc_sel.split(", "):
                 els = page.locator(sel).all()
                 if els:
-                    locations = [e.inner_text().strip() for e in els]
+                    texts = []
+                    for e in els:
+                        try:
+                            texts.append(e.inner_text().strip())
+                        except Exception:
+                            texts.append("")
+                    locations = texts
                     break
 
             # Try each link selector
