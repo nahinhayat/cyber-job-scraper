@@ -24,7 +24,10 @@ HEADERS = {
 # datacenter: region like "us2", "us6", or "" for dedicated instances
 # site_code:  the CX site code used in the candidate portal URL (CX_1001, etc.)
 ORACLE_CLOUD_COMPANIES = {
-    "JPMorgan Chase": ("jpmc", "", "CX_1001"),
+    # JPMorgan Chase returned 400 — tenant "jpmc" or site code "CX_1001" is incorrect.
+    # JPMC careers are at jpmc.wd5.myworkdayjobs.com — they use Workday, not Oracle Cloud HCM.
+    # Add entries here only after verifying the tenant resolves:
+    #   curl "https://{tenant}.fa.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?limit=1"
 }
 
 SEARCH_TERMS = ["cybersecurity", "security analyst", "information security"]

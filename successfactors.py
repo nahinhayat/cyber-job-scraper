@@ -22,16 +22,12 @@ HEADERS = {
 # Format: "company_name": "sf_tenant"
 # Find by visiting the company's careers page and looking for sap.com or successfactors.com
 SUCCESSFACTORS_COMPANIES = {
-    "ExxonMobil":        "exxonmobil",
-    "Chevron":           "chevron",
-    "ConocoPhillips":    "conocophillips",
-    "Shell":             "shell",
-    "BP":                "bp",
-    "Dow":               "dow",
-    "BASF":              "basf",
-    "Siemens":           "siemens",
-    "Philips":           "philips",
-    "Procter & Gamble":  "pg",
+    # All previously tested companies returned DNS failures — {tenant}.jobs.erp.sap
+    # is not the correct hostname for SAP SuccessFactors public job APIs.
+    # SuccessFactors instances are hosted at {tenant}.successfactors.com with
+    # company-specific configurations that require per-tenant research.
+    # Note: ExxonMobil, Chevron, ConocoPhillips are also covered in workday.py
+    # (many energy companies use Workday, not SuccessFactors, for US hiring).
 }
 
 

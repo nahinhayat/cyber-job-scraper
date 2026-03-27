@@ -27,14 +27,11 @@ GREENHOUSE_COMPANIES = {
     "okta": "Okta",
     "huntress": "Huntress",
     "bugcrowd": "Bugcrowd",
-    "palantir": "Palantir",
     "zscaler": "Zscaler",
-    "sentinelone": "SentinelOne",
-    "rapid7": "Rapid7",
-    "tenable": "Tenable",
     "databricks": "Databricks",
-    "hackerone": "HackerOne",
     "dragos": "Dragos",
+    # Removed (404 — wrong board slugs): palantir, sentinelone, rapid7, tenable, hackerone
+    # To find the correct slug: visit their careers page → look for boards.greenhouse.io/{slug}
 }
 
 # Companies using Lever ATS (verified slugs)

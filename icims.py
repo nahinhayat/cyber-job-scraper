@@ -25,26 +25,12 @@ HEADERS = {
 # Format: "company_name": "icims_slug"
 # The job board URL is: https://careers-{slug}.icims.com
 ICIMS_COMPANIES = {
-    "JPMorgan Chase":        "jpmc",
-    "Bank of America":       "bankofamerica",
-    "Wells Fargo":           "wellsfargo",
-    "Citigroup":             "citi",
-    "Goldman Sachs":         "goldmansachs",
-    "Capital One":           "capitalone",
-    "AT&T":                  "att",
-    "Verizon":               "verizon",
-    "Comcast":               "comcast",
-    "UnitedHealth Group":    "unitedhealthgroup",
-    "CVS Health":            "cvshealth",
-    "Walmart":               "walmart",
-    "Target":                "target",
-    "General Motors":        "gm",
-    "Ford Motor":            "ford",
-    "Boeing":                "boeing",
-    "Raytheon Technologies": "rtx",
-    "General Dynamics":      "gd",
-    "L3Harris":              "l3harris",
-    "SAIC":                  "saic",
+    # NOTE: Most large Fortune 500 companies use custom domains for their iCIMS
+    # portals rather than the standard careers-{slug}.icims.com subdomain.
+    # Companies already covered by Workday (AT&T, Verizon, Goldman Sachs, etc.)
+    # have been removed — they don't use the standard iCIMS subdomain pattern.
+    # Add entries here only after verifying via:
+    #   curl -I https://careers-{slug}.icims.com  → should return 200, not 404
 }
 
 SEARCH_TERMS = ["cybersecurity", "security analyst", "information security", "cyber"]

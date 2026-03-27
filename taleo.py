@@ -20,17 +20,13 @@ HEADERS = {
 
 # Format: "company_name": ("taleo_tenant", "career_section_name")
 TALEO_COMPANIES = {
-    # Oracle uses Oracle Cloud HCM (not Taleo) — handled in oracle_cloud.py
+    # All previously tested tenants returned DNS failures — {tenant}.taleo.net
+    # subdomains did not resolve, indicating companies have migrated away from Taleo.
+    # To add a company, first verify: curl -I https://{tenant}.taleo.net
+    # (should return 200/400, not a connection error)
+    # Oracle uses Oracle Cloud HCM — handled in oracle_cloud.py
     # Lockheed Martin uses BrassRing — not covered here
     # Northrop Grumman uses Eightfold — not covered here
-    "FedEx":             ("fedex",       "External"),
-    "UPS":               ("ups",         "External"),
-    "Honeywell":         ("honeywell",   "External"),
-    "3M":                ("3m",          "External"),
-    "Caterpillar":       ("caterpillar", "External"),
-    "Deere & Co":        ("deere",       "External"),
-    "General Mills":     ("generalmills","External"),
-    "Marriott":          ("marriott",    "External"),
 }
 
 
