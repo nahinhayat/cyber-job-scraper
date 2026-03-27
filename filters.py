@@ -43,6 +43,15 @@ SENIOR_EXCLUSION_KEYWORDS = [
     "sr.", "sr ",
 ]
 
+# Explicit mid/senior level number suffixes — exclude these
+MID_SENIOR_LEVEL_PATTERNS = [
+    r"\bii\b", r"\biii\b", r"\biv\b",         # Roman numerals II+
+    r"\blevel [2-9]\b", r"\blevel 1[0-9]\b",   # Level 2+
+    r"\bgrade [2-9]\b",                         # Grade 2+
+    r"\b[2-9]\b$",                              # Trailing lone digit 2–9
+    r"senior", r" sr[\. ]",                     # Redundant but explicit
+]
+
 NON_CYBER_EXCLUSION_KEYWORDS = [
     "billing", "marketing", "sales", "gtm ", "finance", "payroll",
     "commission", "legal operations", "field enablement", "data center services",
@@ -74,13 +83,23 @@ def is_entry_level(title, description=""):
     combined = (title + " " + description).lower()
     t = title.lower()
 
+    # Exclude anything with an explicit senior/lead/manager indicator
     if any(kw in t for kw in SENIOR_EXCLUSION_KEYWORDS):
         return False
 
+    # Exclude mid/senior level number patterns (II, III, Level 2, etc.)
+    if any(re.search(p, t) for p in MID_SENIOR_LEVEL_PATTERNS):
+        return False
+
+    # Explicit entry-level markers are a strong positive signal
     if any(kw in combined for kw in ENTRY_LEVEL_KEYWORDS):
         return True
 
+    # "Associate" + security context is entry-level
     if "associate" in t and any(q in t for q in ASSOCIATE_SECURITY_QUALIFIERS):
         return True
 
-    return False
+    # No explicit level indicator at all → assume entry/mid, include it.
+    # Users would rather see a "Cybersecurity Analyst" that turns out to be
+    # mid-level than miss a genuine entry-level role with no label.
+    return True

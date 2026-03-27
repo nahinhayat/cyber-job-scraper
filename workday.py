@@ -1,6 +1,10 @@
 """
 Workday career page scraper.
 
+Uses requests for companies whose Workday instances don't enforce CSRF,
+and falls back to a headless Playwright browser for companies that do
+(these require JavaScript to obtain a valid XSRF-TOKEN session cookie).
+
 How to add a new company:
   1. Visit the company's careers page in your browser.
   2. It will load a Workday URL like:
@@ -10,6 +14,8 @@ How to add a new company:
 """
 
 import time
+from urllib.parse import urlparse
+
 import requests
 import requests.exceptions
 from filters import is_entry_level, is_cybersecurity
@@ -20,7 +26,7 @@ USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
 WORKDAY_COMPANIES = {
 
     # ── Technology ────────────────────────────────────────────────────────────
-    "Microsoft":          ("microsoft",     "wd1", "microsoftcareers"),
+    # Microsoft uses careers.microsoft.com (not myworkdayjobs.com) → playwright_scraper.py
     "Cisco":              ("cisco",         "wd5", "Cisco_Careers"),
     "Intel":              ("intel",         "wd1", "External"),
     "Salesforce":         ("salesforce",    "wd1", "External"),
@@ -36,11 +42,9 @@ WORKDAY_COMPANIES = {
     "MITRE":              ("mitre",         "wd5", "MITRE"),
 
     # ── Finance / Banking ─────────────────────────────────────────────────────
-    "JPMorgan Chase":     ("jpmc",          "wd5", "JPMCCareers"),
+    # JPMorgan, Goldman Sachs, Capital One use custom portals → playwright_scraper.py
     "Bank of America":    ("ghr",           "wd1", "BAC_Professional"),
-    "Goldman Sachs":      ("goldmansachs",  "wd1", "gs"),
     "Morgan Stanley":     ("morganstanley", "wd1", "Experienced_Jobs"),
-    "Capital One":        ("capitalone",    "wd1", "Capital_One"),
     "American Express":   ("aexp",          "wd5", "amex"),
     "Visa":               ("visa",          "wd1", "VisaJobsGlobal"),
     "Mastercard":         ("mastercard",    "wd1", "mastercardcareers"),
@@ -127,41 +131,91 @@ def _build_api_url(tenant, wd_num, site):
     )
 
 
-def scrape_workday(company_name, tenant, wd_num, site):
-    api_url = _build_api_url(tenant, wd_num, site)
-    base_url = f"https://{tenant}.{wd_num}.myworkdayjobs.com/{site}"
+def _get_session_via_browser(tenant, wd_num, site):
+    """
+    Launch a headless Chromium browser to load the Workday career page,
+    execute JavaScript, and capture the XSRF-TOKEN + Cloudflare cookies.
+    Returns (csrf_token, cookie_jar, actual_site_name).
+    """
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return "", {}, site
 
+    url = f"https://{tenant}.{wd_num}.myworkdayjobs.com/{site}"
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(user_agent=USER_AGENT)
+        page = context.new_page()
+        try:
+            page.goto(url, wait_until="networkidle", timeout=30000)
+            # Discover actual site from final URL (handles redirects)
+            actual_path = urlparse(page.url).path.strip("/").split("/")[0]
+            actual_site = actual_path if actual_path and actual_path != "wday" else site
+            # Collect cookies
+            pw_cookies = context.cookies()
+            csrf = next((c["value"] for c in pw_cookies if c["name"] == "XSRF-TOKEN"), "")
+            cookie_dict = {c["name"]: c["value"] for c in pw_cookies}
+            return csrf, cookie_dict, actual_site
+        except Exception:
+            return "", {}, site
+        finally:
+            browser.close()
+
+
+def scrape_workday(company_name, tenant, wd_num, site):
     session = requests.Session()
     session.headers.update({"User-Agent": USER_AGENT})
 
+    base_url = f"https://{tenant}.{wd_num}.myworkdayjobs.com/{site}"
+
+    # Quick lightweight GET to pick up XSRF-TOKEN if available without JS
     try:
         session.get(base_url, timeout=15)
     except Exception:
         pass
 
     csrf_token = session.cookies.get("XSRF-TOKEN", "")
-    post_headers = {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "Origin": f"https://{tenant}.{wd_num}.myworkdayjobs.com",
-        "Referer": base_url,
-    }
-    if csrf_token:
-        post_headers["X-XSRF-TOKEN"] = csrf_token
+
+    def _make_headers():
+        h = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Origin": f"https://{tenant}.{wd_num}.myworkdayjobs.com",
+            "Referer": base_url,
+        }
+        if csrf_token:
+            h["X-XSRF-TOKEN"] = csrf_token
+        return h
 
     results = []
     seen = set()
+    _browser_attempted = False
 
     for term in SEARCH_TERMS:
         offset = 0
+        api_url = _build_api_url(tenant, wd_num, site)
         while True:
             payload = {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": term}
             try:
-                resp = session.post(api_url, headers=post_headers, json=payload, timeout=15)
+                resp = session.post(api_url, headers=_make_headers(), json=payload, timeout=15)
                 resp.raise_for_status()
                 data = resp.json()
             except requests.exceptions.HTTPError as e:
-                print(f"[!] Workday error for {company_name} ({term}): {e.response.status_code}")
+                status = e.response.status_code
+                # On 422/401/403/404 try once with a real browser session
+                if status in (422, 401, 403, 404) and not _browser_attempted:
+                    _browser_attempted = True
+                    new_csrf, new_cookies, new_site = _get_session_via_browser(tenant, wd_num, site)
+                    if new_cookies:
+                        session.cookies.update(new_cookies)
+                        csrf_token = new_csrf
+                        if new_site != site:
+                            site = new_site
+                            base_url = f"https://{tenant}.{wd_num}.myworkdayjobs.com/{site}"
+                            api_url = _build_api_url(tenant, wd_num, site)
+                        continue  # retry this request with the real session
+                print(f"[!] Workday error for {company_name} ({term}): {status}")
                 break
             except Exception as e:
                 print(f"[!] Workday error for {company_name} ({term}): {e}")

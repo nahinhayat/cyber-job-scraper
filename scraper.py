@@ -27,6 +27,7 @@ from taleo import scrape_all_taleo
 from smartrecruiters import scrape_all_smartrecruiters
 from successfactors import scrape_all_successfactors
 from oracle_cloud import scrape_all_oracle_cloud
+from playwright_scraper import scrape_all_playwright
 from filters import is_entry_level, is_cybersecurity
 from output import save_results
 
@@ -138,6 +139,9 @@ def run():
 
     print("\n[*] Direct company APIs (Amazon / USAJobs)...")
     all_jobs.extend(scrape_all_direct())
+
+    print("\n[*] Custom career portals (Playwright)...")
+    all_jobs.extend(scrape_all_playwright())
 
     print("\n[*] Greenhouse career boards...")
     for company_id, company_name in GREENHOUSE_COMPANIES.items():
