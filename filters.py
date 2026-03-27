@@ -24,7 +24,7 @@ SECURITY_CONTEXT_KEYWORDS = [
 ]
 
 SECURITY_CONTEXT_QUALIFIERS = [
-    "cyber", "security", "information", "infosec", "it ", "cloud",
+    "cyber", "security", "information", "infosec", "cloud",
 ]
 
 ENTRY_LEVEL_KEYWORDS = [
@@ -57,6 +57,13 @@ NON_CYBER_EXCLUSION_KEYWORDS = [
     "commission", "legal operations", "field enablement", "data center services",
     "business systems", "reporting analyst", "product analyst",
     "application development analyst",
+    # Physical / facility security (not cybersecurity)
+    "security guard", "security associate", "security officer, physical",
+    "facility security", "industrial security", "personnel security",
+    "physical security", "program security officer", "contract program security",
+    "contractor program security", "overnight security", "outside security",
+    "asset security executive", "administrative business partner",
+    "security cooperation", "security assistance",
 ]
 
 
