@@ -15,9 +15,9 @@ Lever: Visit their careers page, look for a URL like
     jobs.lever.co/<company_slug>
     The <company_slug> is the slug to use here.
 
-NOTE: CrowdStrike, Palo Alto Networks, Rapid7, and many large
-enterprise security firms use Workday, not Greenhouse/Lever.
-Workday scraping requires a separate implementation (see CUSTOM_COMPANIES).
+NOTE: CrowdStrike, Palo Alto Networks, Raytheon, and many large
+defense/enterprise security firms use Workday, not Greenhouse/Lever.
+Those are handled in workday.py.
 """
 
 # Companies using Greenhouse ATS (verified board IDs)
@@ -26,20 +26,12 @@ GREENHOUSE_COMPANIES = {
     "cloudflare": "Cloudflare",
     "okta": "Okta",
     "huntress": "Huntress",
-    "snyk": "Snyk",
     "bugcrowd": "Bugcrowd",
-    "1password": "1Password",
-    "wiz-inc": "Wiz",
-    "trailofbits": "Trail of Bits",
 }
 
 # Companies using Lever ATS (verified slugs)
-LEVER_COMPANIES = {
-    "abnormalsecurity": "Abnormal Security",
-    "vectra-ai": "Vectra AI",
-    "armorblox": "Armorblox",
-    "lacework": "Lacework",
-}
+# To find a slug: visit jobs.lever.co/<slug> — if it loads, it's valid.
+LEVER_COMPANIES = {}
 
 # Companies with custom career pages (requires CSS selectors).
 # Note: These may break if the company redesigns their site.

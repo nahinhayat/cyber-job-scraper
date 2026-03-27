@@ -9,7 +9,7 @@ How to find a company's Workday tenant:
   1. Go to the company's careers page and click any job listing.
   2. The URL will look like:
        https://<tenant>.wd<n>.myworkdayjobs.com/<site>/job/<job-title>/<job-id>
-  3. Copy the <tenant> and <n> values into WORKDAY_COMPANIES below.
+  3. Use <tenant>.wd<n> as the first two tuple values in WORKDAY_COMPANIES below.
 """
 
 import time
@@ -23,7 +23,7 @@ HEADERS = {
 }
 
 # Format: "company_name": ("tenant", "wd_number", "site_path")
-# site_path is the path segment after myworkdayjobs.com/ in the job board URL
+# wd_number already includes the "wd" prefix, e.g. "wd5"
 WORKDAY_COMPANIES = {
     "CrowdStrike":        ("crowdstrike",         "wd5", "crowdstrikecareers"),
     "Palo Alto Networks": ("paloaltonetworks",     "wd1", "external"),
@@ -41,8 +41,9 @@ SEARCH_TERMS = ["cybersecurity", "security analyst", "information security"]
 
 
 def _build_api_url(tenant: str, wd_num: str, site: str) -> str:
+    # wd_num already includes the "wd" prefix (e.g. "wd5"), so don't add it again
     return (
-        f"https://{tenant}.wd{wd_num}.myworkdayjobs.com"
+        f"https://{tenant}.{wd_num}.myworkdayjobs.com"
         f"/wday/cxs/{tenant}/{site}/jobs"
     )
 
@@ -50,7 +51,7 @@ def _build_api_url(tenant: str, wd_num: str, site: str) -> str:
 def scrape_workday(company_name: str, tenant: str, wd_num: str, site: str) -> list[dict]:
     """Query a company's Workday jobs API for cybersecurity openings."""
     url = _build_api_url(tenant, wd_num, site)
-    base_url = f"https://{tenant}.wd{wd_num}.myworkdayjobs.com/{site}"
+    base_url = f"https://{tenant}.{wd_num}.myworkdayjobs.com/{site}"
     results = []
     seen = set()
 
