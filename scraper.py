@@ -2,14 +2,21 @@
 """
 Cyber Job Scraper
 Scrapes major company career pages for entry-level cybersecurity positions.
-Supports Greenhouse and Lever ATS APIs, plus custom career pages.
+
+Sources:
+  - Company career pages via Workday API (CrowdStrike, Palo Alto, Raytheon, etc.)
+  - Direct company APIs (Microsoft, Google, Amazon, USAJobs)
+  - Greenhouse ATS boards (Cloudflare, Okta, Huntress, Snyk, etc.)
+  - Lever ATS boards (Abnormal Security, Vectra AI, etc.)
+  - Custom HTML scrapers (Cisco, IBM)
 """
 
-import json
 import time
 import requests
 from bs4 import BeautifulSoup
 from companies import GREENHOUSE_COMPANIES, LEVER_COMPANIES, CUSTOM_COMPANIES
+from workday import scrape_all_workday
+from direct_api import scrape_all_direct
 from filters import is_entry_level, is_cybersecurity
 from output import save_results
 
@@ -19,7 +26,6 @@ HEADERS = {
 
 
 def scrape_greenhouse(company_id: str, company_name: str) -> list[dict]:
-    """Fetch jobs from Greenhouse ATS public API."""
     url = f"https://boards-api.greenhouse.io/v1/boards/{company_id}/jobs?content=true"
     try:
         resp = requests.get(url, headers=HEADERS, timeout=10)
@@ -43,7 +49,6 @@ def scrape_greenhouse(company_id: str, company_name: str) -> list[dict]:
 
 
 def scrape_lever(company_id: str, company_name: str) -> list[dict]:
-    """Fetch jobs from Lever ATS public API."""
     url = f"https://api.lever.co/v0/postings/{company_id}?mode=json"
     try:
         resp = requests.get(url, headers=HEADERS, timeout=10)
@@ -68,7 +73,6 @@ def scrape_lever(company_id: str, company_name: str) -> list[dict]:
 
 
 def scrape_custom(config: dict) -> list[dict]:
-    """Scrape a custom career page using CSS selectors."""
     company_name = config["name"]
     url = config["url"]
     try:
@@ -104,26 +108,40 @@ def scrape_custom(config: dict) -> list[dict]:
 def run():
     all_jobs = []
 
-    print("[*] Scraping Greenhouse companies...")
+    print("[*] Scraping company career pages (Workday)...")
+    all_jobs.extend(scrape_all_workday())
+
+    print("\n[*] Scraping direct company APIs (Microsoft / Google / Amazon / USAJobs)...")
+    all_jobs.extend(scrape_all_direct())
+
+    print("\n[*] Scraping Greenhouse career boards...")
     for company_id, company_name in GREENHOUSE_COMPANIES.items():
         print(f"    -> {company_name}")
         all_jobs.extend(scrape_greenhouse(company_id, company_name))
         time.sleep(0.5)
 
-    print("[*] Scraping Lever companies...")
+    print("\n[*] Scraping Lever career boards...")
     for company_id, company_name in LEVER_COMPANIES.items():
         print(f"    -> {company_name}")
         all_jobs.extend(scrape_lever(company_id, company_name))
         time.sleep(0.5)
 
-    print("[*] Scraping custom career pages...")
+    print("\n[*] Scraping custom career pages...")
     for config in CUSTOM_COMPANIES:
         print(f"    -> {config['name']}")
         all_jobs.extend(scrape_custom(config))
         time.sleep(1)
 
-    print(f"\n[+] Found {len(all_jobs)} matching job(s).")
-    save_results(all_jobs)
+    # Deduplicate by URL
+    seen_urls = set()
+    unique_jobs = []
+    for job in all_jobs:
+        if job["url"] not in seen_urls:
+            seen_urls.add(job["url"])
+            unique_jobs.append(job)
+
+    print(f"\n[+] Found {len(unique_jobs)} matching job(s).")
+    save_results(unique_jobs)
 
 
 if __name__ == "__main__":
