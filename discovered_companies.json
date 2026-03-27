@@ -1,0 +1,2387 @@
+{
+  "Apple": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Alphabet (Google)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Amazon": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Saudi Aramco": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "TSMC": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Tesla": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Meta Platforms (Facebook)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Berkshire Hathaway": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Samsung": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Eli Lilly": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Exxon Mobil": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Visa": {
+    "greenhouse": null,
+    "smartrecruiters": "visa",
+    "lever": null
+  },
+  "Tencent": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ASML": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Costco": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Mastercard": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Chevron": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "SK Hynix": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Micron Technology": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Oracle": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Netflix": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ICBC": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "AbbVie": {
+    "greenhouse": null,
+    "smartrecruiters": "abbvie",
+    "lever": null
+  },
+  "China Construction Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "PetroChina": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Palantir": {
+    "greenhouse": null,
+    "smartrecruiters": "palantir",
+    "lever": "palantir"
+  },
+  "Procter & Gamble": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "AMD": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Agricultural Bank of China": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Coca-Cola": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Caterpillar": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Roche": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Home Depot": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "General Electric": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Merck": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "AstraZeneca": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Alibaba": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Novartis": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CATL": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "HSBC": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Toyota": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Applied Materials": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Lam Research": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "LVMH": {
+    "greenhouse": null,
+    "smartrecruiters": "lvmh",
+    "lever": null
+  },
+  "Bank of China": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Shell": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Kweichow Moutai": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Philip Morris International": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Nestl\u00e9": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Wells Fargo": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "T-Mobile US": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "UnitedHealth": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "International Holding Company": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "GE Vernova": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Linde": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "IBM": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Royal Bank Of Canada": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "McDonald": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "China Mobile": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "L'Or\u00e9al": {
+    "greenhouse": null,
+    "smartrecruiters": "loral",
+    "lever": null
+  },
+  "Pepsico": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "American Express": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Commonwealth Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Herm\u00e8s": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Prosus": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "SAP": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Reliance Industries": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "TotalEnergies": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Nextera Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "KLA": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Amgen": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Citigroup": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Mitsubishi UFJ Financial": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CNOOC": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Abbott Laboratories": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Siemens": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Inditex": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "BHP Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Deutsche Telekom": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Thermo Fisher Scientific": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Texas Instruments": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "TJX Companies": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Gilead Sciences": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Walt Disney": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Charles Schwab": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ConocoPhillips": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Novo Nordisk": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Intuitive Surgical": {
+    "greenhouse": null,
+    "smartrecruiters": "intuitive",
+    "lever": null
+  },
+  "CM Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Santander": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Pfizer": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Allianz SE": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Arm Holdings": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Toronto Dominion Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Deere & Company (John Deere)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "China Life Insurance": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Amphenol": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Arista Networks": {
+    "greenhouse": null,
+    "smartrecruiters": "aristanetworks",
+    "lever": null
+  },
+  "Analog Devices": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Ping An Insurance": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Iberdrola": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Schneider Electric": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "China Shenhua Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "BlackRock": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Airbus": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Shopify": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ABB": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Uber": {
+    "greenhouse": null,
+    "smartrecruiters": "uber",
+    "lever": null
+  },
+  "Foxconn Industrial Internet": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "PDD Holdings (Pinduoduo)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Union Pacific Corporation": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Honeywell": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "BYD": {
+    "greenhouse": "byd",
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Siemens Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Rio Tinto": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "SoftBank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Eaton": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Welltower": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "QUALCOMM": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Petrobras": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Safran": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Southern Copper": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Hitachi": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Mitsubishi Corporation": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Blackstone Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Anheuser-Busch Inbev": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Booking Holdings (Booking.com)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Unilever": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "AppLovin": {
+    "greenhouse": "applovin",
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Lowe's Companies": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Danaher": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "DBS Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Stryker Corporation": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Chubb": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "HDFC Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "British American Tobacco": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Zijin Mining": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "S&P Global": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Rolls-Royce Holdings": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Delta Electronics": {
+    "greenhouse": null,
+    "smartrecruiters": "deltaelectronics",
+    "lever": null
+  },
+  "Sumitomo Mitsui Financial Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Prologis": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Palo Alto Networks": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Bristol-Myers Squibb": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "BP": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Accenture": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Enbridge": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Bharti Airtel": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Fast Retailing": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sony": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Progressive": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Corning": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Banco Bilbao Vizcaya Argentaria": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Intuit": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Mitsui Bussan": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "UBS": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Air Liquide": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "AIA": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sanofi": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Tokyo Electron": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Parker-Hannifin": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Medtronic": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Investor AB": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Altria Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Al Rajhi Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Newmont": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Vertex Pharmaceuticals": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Capital One": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Interactive Brokers": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Constellation Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": "constellation"
+  },
+  "GSK plc": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Xiaomi": {
+    "greenhouse": null,
+    "smartrecruiters": "xiaomi",
+    "lever": null
+  },
+  "Southern Company": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CME Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "HCA Healthcare": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "McKesson": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ServiceNow": {
+    "greenhouse": null,
+    "smartrecruiters": "servicenow",
+    "lever": null
+  },
+  "Enel": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Delta Electronics (Thailand)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "UniCredit": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Canadian Natural Resources": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "EssilorLuxottica": {
+    "greenhouse": null,
+    "smartrecruiters": "essilorluxottica",
+    "lever": null
+  },
+  "Sinopec": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Equinor": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Boston Scientific": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "BNP Paribas": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Zurich Insurance Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Intesa Sanpaolo": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Compagnie Financi\u00e8re Richemont": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Duke Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Advantest": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "State Bank of India": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Starbucks": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Northrop Grumman": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Spotify": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Agnico Eagle Mines": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "China Yangtze Power": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Zhongji Innolight": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Adobe": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Mitsubishi Heavy Industries": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Vertiv Holdings": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Westpac Banking": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Western Digital": {
+    "greenhouse": null,
+    "smartrecruiters": "westerndigital",
+    "lever": null
+  },
+  "Equinix": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Mizuho Financial Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Bank of Montreal": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ICICI Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Howmet Aerospace": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Trane Technologies": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Tata Consultancy Services": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Waste Management": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sandisk": {
+    "greenhouse": null,
+    "smartrecruiters": "sandisk",
+    "lever": null
+  },
+  "Dior": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Williams Companies": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "It\u014dch\u016b Sh\u014dji": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "AXA": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Brookfield Corporation": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "National Australia Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Tokio Marine": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Bank of Communications": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Postal Savings Bank of China": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Chugai Pharmaceutical": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Intercontinental Exchange": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Foxconn (Hon Hai Precision Industry)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Keyence": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Ita\u00fa Unibanco": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Glencore": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CIBC (Canadian Imperial Bank of Commerce)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Hyundai": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Enterprise Products": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Seagate Technology": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Marriott International": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Marsh & McLennan Companies": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Scotiabank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sberbank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Quanta Services": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Marvell Technology": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Midea": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "PNC Financial Services": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "FedEx": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Automatic Data Processing": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "National Grid": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "MercadoLibre": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "KKR & Co.": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ENI": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "EOG Resources": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CaixaBank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "NTT (Nippon Telegraph & Telephone)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "United Parcel Service": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Johnson Controls": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Vinci": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Freeport-McMoRan": {
+    "greenhouse": null,
+    "smartrecruiters": "freeport-mcmoran",
+    "lever": null
+  },
+  "BNY Mellon (Bank of New York Mellon)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "BAE Systems": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "SLB (Schlumberger)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Atlas Copco": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Grupo M\u00e9xico": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "American Tower": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "TAQA": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "U.S. Bancorp": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Suncor Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "MediaTek": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Regeneron Pharmaceuticals": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ENGIE": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sherwin-Williams": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Munich RE (M\u00fcnchener R\u00fcck)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "O'Reilly Automotive": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Nike": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Moody's": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Valero Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "3M": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Kinder Morgan": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cadence Design Systems": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "OCBC Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Phillips 66": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Mondelez International": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ANZ Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Illinois Tool Works": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "America Movil": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "BTG Pactual": {
+    "greenhouse": "btgpactual",
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Ecolab": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Marathon Petroleum": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CSX Corporation": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Airbnb": {
+    "greenhouse": "airbnb",
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Rheinmetall": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Motorola Solutions": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Synopsys": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ING": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cummins": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Royal Caribbean Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cloudflare": {
+    "greenhouse": "cloudflare",
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Shin-Etsu Chemical": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "China Telecom": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Lloyds Banking Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Brookfield Asset Management": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Emerson": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "American Electric Power": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "NetEase": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Monster Beverage": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "The Cigna Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CPKC (Canadian Pacific Kansas City)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Barclays": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "KIOXIA Holdings Corporation": {
+    "greenhouse": null,
+    "smartrecruiters": "kioxia",
+    "lever": null
+  },
+  "Ross Stores": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Hilton Worldwide": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Mitsubishi Electric": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "General Motors": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cement Roadstone Holding": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ADNOC Gas": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Meituan": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Energy Transfer LP": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Colgate-Palmolive": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Aon": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "The Saudi National Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Nintendo": {
+    "greenhouse": "nintendo",
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Warner Bros. Discovery": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CITIC Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Republic Services": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Ma'aden": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Carvana": {
+    "greenhouse": "carvana",
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cintas": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Japan Tobacco": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "TC Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Nu Holdings": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "SMIC": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Air Products and Chemicals": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Imperial Oil": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Vale": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Occidental Petroleum": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Barrick Gold": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "KDDI": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "TransDigm Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Volvo Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Eoptolink Technology": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "L3Harris Technologies": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Nongfu Spring": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cheniere Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Singtel": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Norfolk Southern": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "DoorDash": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "The Travelers Companies": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Rosneft": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Elevance Health": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Hong Kong Exchanges & Clearing": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Apollo Global Management": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sempra": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cambricon Technologies": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Baker Hughes": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Canadian National Railway": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Digital Realty": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "LG Energy Solution": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cencora": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Robinhood": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "TE Connectivity": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Paccar": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "MPLX": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Oneok": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Walmex": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Marubeni": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Zijin Gold International Company Limited": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Japan Post Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Simon Property Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Fortinet": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Generali": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Wuliangye Yibin": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Hoya": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "RELX": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Industrial Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Wesfarmers": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "NatWest Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "DHL Group (Deutsche Post)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Diamondback Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Truist Financial Corporation": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Ciena": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Recruit": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Realty Income": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Takeda Pharmaceutical": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Wheaton Precious Metals": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Ferrari": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Thales": {
+    "greenhouse": null,
+    "smartrecruiters": "thales",
+    "lever": null
+  },
+  "Manulife Financial": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Saudi Telecom Company": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Infineon": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Becton Dickinson": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Nordea Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Aflac": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "E.ON": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Bajaj Finance": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Bank of China (Hong Kong)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cr\u00e9dit Agricole": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Corteva": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "UCB": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Deutsche Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "AutoZone": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "DSV": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "London Stock Exchange": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "BMW": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Targa Resources": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Dominion Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Luxshare Precision": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Loblaw Companies": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Arthur J. Gallagher & Co.": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Jiangsu Hengrui Medicine": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "BASF": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Snowflake": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Orange": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Macquarie Group Limited": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Vistra": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Mercedes-Benz": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Merck KGaA": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Alimentation Couche-Tard": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Jardine Matheson": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Allstate": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Infosys": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "First Abu Dhabi Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CMOC": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CITIC Securities": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Larsen & Toubro": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Fastenal": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "China Pacific Insurance": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Monolithic Power Systems": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Hindustan Unilever": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Life Insurance Corporation of India (LIC)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Electronic Arts": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cenovus Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Deutsche B\u00f6rse": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Lumentum": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "W. W. Grainger": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Zoetis": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Volkswagen": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "National Bank of Canada": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Entergy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Danone": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Exelon Corporation": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Samsung Biologics": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sungrow Power Supply": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "KBC": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Autodesk": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Xcel Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Bank Central Asia": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Cardinal Health": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "NXP Semiconductors": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Novatek": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Shanghai Pudong Development Bank": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Comfort Systems USA": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Ametek": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "The People's Insurance Company (PICC)": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Lukoil": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Keysight": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "CSL": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sun Hung Kai Properties": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Fujikura": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "NAURA Technology Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "SK Square": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Emirates NBD Bank PJSC": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Swiss Re": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "SABIC": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Woodside Energy": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Ubiquiti": {
+    "greenhouse": "ubiquiti",
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "ASE Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "UOB": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Public Storage": {
+    "greenhouse": null,
+    "smartrecruiters": "publicstorage",
+    "lever": null
+  },
+  "Nasdaq": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sea Limited": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Edwards Lifesciences": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Teradyne": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "United Rentals": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sumitomo Denki K\u014dgy\u014d": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Siemens Healthineers": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Compass Group": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Coherent Corp.": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sandvik": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Hanwha Aerospace": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Sun Pharmaceutical": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Carrier Global": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  },
+  "Standard Chartered": {
+    "greenhouse": null,
+    "smartrecruiters": null,
+    "lever": null
+  }
+}

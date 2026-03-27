@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 """
-Cyber Job Scraper -- Fortune 500 Edition
+Cyber Job Scraper -- Top 500 Market Cap Edition
 Scrapes major company career pages for entry-level cybersecurity positions.
 
 ATS platforms covered:
   - Workday        (CrowdStrike, MITRE, Booz Allen, T-Mobile, Comcast, Target, Dell, Walmart)
   - Oracle Cloud   (JPMorgan Chase)
-  - iCIMS          (JPMorgan, Bank of America, AT&T, Verizon, Boeing, and more)
-  - Taleo/Oracle   (FedEx, UPS, Honeywell, 3M, Caterpillar, and more)
-  - SmartRecruiters(Visa, McDonald's, Pfizer, Starbucks, and more)
-  - SuccessFactors (ExxonMobil, Chevron, Shell, Siemens, and more)
+  - SmartRecruiters(discovered via discover.py)
   - Greenhouse     (Cloudflare, Okta, Huntress, Bugcrowd, and more)
+  - Lever          (discovered via discover.py)
   - Direct APIs    (Amazon, USAJobs/federal government)
-  - Custom scrapers(Cisco, IBM)
+  - Custom portals (Microsoft, Lockheed, Boeing, Goldman Sachs, and more via Playwright)
+  - Auto-discovered(loaded from discovered_companies.json)
 """
 
+import json
+import os
 import time
 import requests
 from bs4 import BeautifulSoup
@@ -160,6 +161,63 @@ def run():
         print(f"    -> {config['name']}")
         all_jobs.extend(scrape_custom(config))
         time.sleep(1)
+
+    # Auto-discovered companies from discover.py
+    discovered_path = os.path.join(os.path.dirname(__file__), "discovered_companies.json")
+    if os.path.exists(discovered_path):
+        with open(discovered_path) as f:
+            discovered = json.load(f)
+
+        # Build sets of slugs already covered by static configs to avoid duplication
+        existing_greenhouse = set(GREENHOUSE_COMPANIES.keys())
+        existing_lever = set(LEVER_COMPANIES.keys())
+        existing_sr = set()
+        try:
+            from smartrecruiters import SMARTRECRUITERS_COMPANIES
+            existing_sr = set(SMARTRECRUITERS_COMPANIES.keys())
+        except ImportError:
+            pass
+
+        disc_greenhouse = {
+            company: ats["greenhouse"]
+            for company, ats in discovered.items()
+            if ats.get("greenhouse") and ats["greenhouse"] not in existing_greenhouse
+        }
+        disc_smartrecruiters = {
+            company: ats["smartrecruiters"]
+            for company, ats in discovered.items()
+            if ats.get("smartrecruiters") and ats["smartrecruiters"] not in existing_sr
+        }
+        disc_lever = {
+            company: ats["lever"]
+            for company, ats in discovered.items()
+            if ats.get("lever") and ats["lever"] not in existing_lever
+        }
+
+        if disc_greenhouse:
+            print(f"\n[*] Discovered Greenhouse companies ({len(disc_greenhouse)})...")
+            for company_name, slug in disc_greenhouse.items():
+                print(f"    -> {company_name} ({slug})")
+                all_jobs.extend(scrape_greenhouse(slug, company_name))
+                time.sleep(0.5)
+
+        if disc_smartrecruiters:
+            print(f"\n[*] Discovered SmartRecruiters companies ({len(disc_smartrecruiters)})...")
+            for company_name, slug in disc_smartrecruiters.items():
+                print(f"    -> {company_name} ({slug})")
+                try:
+                    from smartrecruiters import scrape_smartrecruiters
+                    all_jobs.extend(scrape_smartrecruiters(company_name, slug))
+                except Exception as e:
+                    print(f"    [!] Error: {e}")
+                time.sleep(0.5)
+
+        if disc_lever:
+            print(f"\n[*] Discovered Lever companies ({len(disc_lever)})...")
+            for company_name, slug in disc_lever.items():
+                print(f"    -> {company_name} ({slug})")
+                all_jobs.extend(scrape_lever(slug, company_name))
+                time.sleep(0.5)
 
     # Deduplicate by URL
     seen_urls = set()
