@@ -1,31 +1,41 @@
 #!/usr/bin/env python3
 """
-Cyber Job Scraper
+Cyber Job Scraper -- Fortune 500 Edition
 Scrapes major company career pages for entry-level cybersecurity positions.
 
-Sources:
-  - Company career pages via Workday API (CrowdStrike, Palo Alto, Raytheon, etc.)
-  - Direct company APIs (Microsoft, Google, Amazon, USAJobs)
-  - Greenhouse ATS boards (Cloudflare, Okta, Huntress, Snyk, etc.)
-  - Lever ATS boards (Abnormal Security, Vectra AI, etc.)
-  - Custom HTML scrapers (Cisco, IBM)
+ATS platforms covered:
+  - Workday        (CrowdStrike, MITRE, Booz Allen, T-Mobile, Comcast, Target, Dell, Walmart)
+  - Oracle Cloud   (JPMorgan Chase)
+  - iCIMS          (JPMorgan, Bank of America, AT&T, Verizon, Boeing, and more)
+  - Taleo/Oracle   (FedEx, UPS, Honeywell, 3M, Caterpillar, and more)
+  - SmartRecruiters(Visa, McDonald's, Pfizer, Starbucks, and more)
+  - SuccessFactors (ExxonMobil, Chevron, Shell, Siemens, and more)
+  - Greenhouse     (Cloudflare, Okta, Huntress, Bugcrowd, and more)
+  - Direct APIs    (Amazon, USAJobs/federal government)
+  - Custom scrapers(Cisco, IBM)
 """
 
 import time
 import requests
 from bs4 import BeautifulSoup
+
 from companies import GREENHOUSE_COMPANIES, LEVER_COMPANIES, CUSTOM_COMPANIES
 from workday import scrape_all_workday
 from direct_api import scrape_all_direct
+from icims import scrape_all_icims
+from taleo import scrape_all_taleo
+from smartrecruiters import scrape_all_smartrecruiters
+from successfactors import scrape_all_successfactors
+from oracle_cloud import scrape_all_oracle_cloud
 from filters import is_entry_level, is_cybersecurity
 from output import save_results
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; CyberJobScraper/1.0)"
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
 
-def scrape_greenhouse(company_id: str, company_name: str) -> list[dict]:
+def scrape_greenhouse(company_id, company_name):
     url = f"https://boards-api.greenhouse.io/v1/boards/{company_id}/jobs?content=true"
     try:
         resp = requests.get(url, headers=HEADERS, timeout=10)
@@ -48,7 +58,7 @@ def scrape_greenhouse(company_id: str, company_name: str) -> list[dict]:
         return []
 
 
-def scrape_lever(company_id: str, company_name: str) -> list[dict]:
+def scrape_lever(company_id, company_name):
     url = f"https://api.lever.co/v0/postings/{company_id}?mode=json"
     try:
         resp = requests.get(url, headers=HEADERS, timeout=10)
@@ -72,7 +82,7 @@ def scrape_lever(company_id: str, company_name: str) -> list[dict]:
         return []
 
 
-def scrape_custom(config: dict) -> list[dict]:
+def scrape_custom(config):
     company_name = config["name"]
     url = config["url"]
     try:
@@ -108,25 +118,40 @@ def scrape_custom(config: dict) -> list[dict]:
 def run():
     all_jobs = []
 
-    print("[*] Scraping company career pages (Workday)...")
+    print("[*] Workday career pages...")
     all_jobs.extend(scrape_all_workday())
 
-    print("\n[*] Scraping direct company APIs (Microsoft / Google / Amazon / USAJobs)...")
+    print("\n[*] Oracle Cloud HCM career pages...")
+    all_jobs.extend(scrape_all_oracle_cloud())
+
+    print("\n[*] iCIMS career pages...")
+    all_jobs.extend(scrape_all_icims())
+
+    print("\n[*] Taleo/Oracle career pages...")
+    all_jobs.extend(scrape_all_taleo())
+
+    print("\n[*] SmartRecruiters career pages...")
+    all_jobs.extend(scrape_all_smartrecruiters())
+
+    print("\n[*] SAP SuccessFactors career pages...")
+    all_jobs.extend(scrape_all_successfactors())
+
+    print("\n[*] Direct company APIs (Amazon / USAJobs)...")
     all_jobs.extend(scrape_all_direct())
 
-    print("\n[*] Scraping Greenhouse career boards...")
+    print("\n[*] Greenhouse career boards...")
     for company_id, company_name in GREENHOUSE_COMPANIES.items():
         print(f"    -> {company_name}")
         all_jobs.extend(scrape_greenhouse(company_id, company_name))
         time.sleep(0.5)
 
-    print("\n[*] Scraping Lever career boards...")
+    print("\n[*] Lever career boards...")
     for company_id, company_name in LEVER_COMPANIES.items():
         print(f"    -> {company_name}")
         all_jobs.extend(scrape_lever(company_id, company_name))
         time.sleep(0.5)
 
-    print("\n[*] Scraping custom career pages...")
+    print("\n[*] Custom career pages...")
     for config in CUSTOM_COMPANIES:
         print(f"    -> {config['name']}")
         all_jobs.extend(scrape_custom(config))
@@ -140,7 +165,7 @@ def run():
             seen_urls.add(job["url"])
             unique_jobs.append(job)
 
-    print(f"\n[+] Found {len(unique_jobs)} matching job(s).")
+    print(f"\n[+] Found {len(unique_jobs)} matching job(s) across all sources.")
     save_results(unique_jobs)
 
 

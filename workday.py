@@ -1,46 +1,47 @@
 """
 Workday career page scraper.
 
-Many large companies (CrowdStrike, Palo Alto Networks, Raytheon, etc.) host
-their jobs on Workday. Each company's Workday instance exposes a public JSON
-API that can be queried directly — no browser or login required.
-
-How to find a company's Workday tenant:
-  1. Go to the company's careers page and click any job listing.
-  2. The URL will look like:
-       https://<tenant>.wd<n>.myworkdayjobs.com/<site>/job/<job-title>/<job-id>
-  3. Use <tenant>.wd<n> as the first two tuple values in WORKDAY_COMPANIES below.
+How to add a new company:
+  1. Visit the company's careers page in your browser (e.g. careers.boozallen.com).
+  2. It will redirect to a Workday URL like:
+       https://<tenant>.wd<n>.myworkdayjobs.com/<SITE_NAME>/...
+  3. Run the verifier to confirm the path works:
+       python verify_workday.py <tenant> <wdN> <SITE_NAME>
+     Example: python verify_workday.py boozallen wd1 EXP
+  4. If it prints OK, add the entry to WORKDAY_COMPANIES below.
 """
 
 import time
 import requests
+import requests.exceptions
 from filters import is_entry_level, is_cybersecurity
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; CyberJobScraper/1.0)",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-}
+USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
 # Format: "company_name": ("tenant", "wd_number", "site_path")
 # wd_number already includes the "wd" prefix, e.g. "wd5"
 WORKDAY_COMPANIES = {
-    "CrowdStrike":        ("crowdstrike",         "wd5", "crowdstrikecareers"),
-    "Palo Alto Networks": ("paloaltonetworks",     "wd1", "external"),
-    "Booz Allen Hamilton":("boozallen",            "wd1", "EXP"),
-    "Lockheed Martin":    ("lmcocareers",          "wd1", "LMCareers"),
-    "Raytheon":           ("rtx",                  "wd1", "RTX"),
-    "Northrop Grumman":   ("ngc",                  "wd1", "NGC_External_Site"),
-    "MITRE":              ("mitre",                "wd5", "MITRE"),
-    "Leidos":             ("leidos",               "wd1", "Leidos"),
-    "ManTech":            ("mantech",              "wd1", "mantech"),
-    "CACI":               ("caci",                 "wd1", "CACI"),
+    # --- Verified working ---
+    "CrowdStrike":        ("crowdstrike", "wd5", "crowdstrikecareers"),
+    "MITRE":              ("mitre",       "wd5", "MITRE"),
+    "Booz Allen Hamilton":("bah",         "wd1", "BAH_Jobs"),
+
+    # --- Confirmed via career page inspection ---
+    "T-Mobile":           ("tmobile",     "wd1", "External"),
+    "Comcast":            ("comcast",     "wd5", "Comcast_Careers"),
+    "Target":             ("target",      "wd5", "targetcareers"),
+    "Dell":               ("dell",        "wd1", "External"),
+    "Walmart":            ("walmart",     "wd5", "WalmartExternal"),
+
+    # Note: Palo Alto uses TalentBrew, Lockheed uses BrassRing,
+    # Northrop uses Eightfold, ManTech uses Avature — not Workday.
+    # Add more verified companies with: python verify_workday.py <tenant> <wdN> <site>
 }
 
 SEARCH_TERMS = ["cybersecurity", "security analyst", "information security"]
 
 
-def _build_api_url(tenant: str, wd_num: str, site: str) -> str:
+def _build_api_url(tenant, wd_num, site):
     # wd_num already includes the "wd" prefix (e.g. "wd5"), so don't add it again
     return (
         f"https://{tenant}.{wd_num}.myworkdayjobs.com"
@@ -48,10 +49,30 @@ def _build_api_url(tenant: str, wd_num: str, site: str) -> str:
     )
 
 
-def scrape_workday(company_name: str, tenant: str, wd_num: str, site: str) -> list[dict]:
+def scrape_workday(company_name, tenant, wd_num, site):
     """Query a company's Workday jobs API for cybersecurity openings."""
-    url = _build_api_url(tenant, wd_num, site)
+    api_url = _build_api_url(tenant, wd_num, site)
     base_url = f"https://{tenant}.{wd_num}.myworkdayjobs.com/{site}"
+
+    session = requests.Session()
+    session.headers.update({"User-Agent": USER_AGENT})
+
+    try:
+        session.get(base_url, timeout=15)
+    except Exception:
+        pass
+
+    csrf_token = session.cookies.get("XSRF-TOKEN", "")
+
+    post_headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Origin": f"https://{tenant}.{wd_num}.myworkdayjobs.com",
+        "Referer": base_url,
+    }
+    if csrf_token:
+        post_headers["X-XSRF-TOKEN"] = csrf_token
+
     results = []
     seen = set()
 
@@ -65,9 +86,12 @@ def scrape_workday(company_name: str, tenant: str, wd_num: str, site: str) -> li
                 "searchText": term,
             }
             try:
-                resp = requests.post(url, headers=HEADERS, json=payload, timeout=15)
+                resp = session.post(api_url, headers=post_headers, json=payload, timeout=15)
                 resp.raise_for_status()
                 data = resp.json()
+            except requests.exceptions.HTTPError as e:
+                print(f"[!] Workday error for {company_name} ({term}): {e.response.status_code}")
+                break
             except Exception as e:
                 print(f"[!] Workday error for {company_name} ({term}): {e}")
                 break
@@ -103,7 +127,7 @@ def scrape_workday(company_name: str, tenant: str, wd_num: str, site: str) -> li
     return results
 
 
-def scrape_all_workday() -> list[dict]:
+def scrape_all_workday():
     all_jobs = []
     for company_name, (tenant, wd_num, site) in WORKDAY_COMPANIES.items():
         print(f"    -> {company_name}")
