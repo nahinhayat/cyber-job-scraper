@@ -223,13 +223,13 @@ def scrape_usajobs() -> list[dict]:
 def scrape_all_direct() -> list[dict]:
     all_jobs = []
 
-    print("    -> Microsoft")
-    all_jobs.extend(scrape_microsoft())
-    time.sleep(1)
+    # Microsoft gcsservices endpoint returning 502 — disabled until fixed
+    # print("    -> Microsoft")
+    # all_jobs.extend(scrape_microsoft())
 
-    print("    -> Google")
-    all_jobs.extend(scrape_google())
-    time.sleep(1)
+    # Google v3 API was removed (404) — disabled until a replacement is found
+    # print("    -> Google")
+    # all_jobs.extend(scrape_google())
 
     print("    -> Amazon")
     all_jobs.extend(scrape_amazon())
