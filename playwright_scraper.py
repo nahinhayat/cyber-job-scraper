@@ -261,10 +261,10 @@ PORTAL_COMPANIES = [
     ),
     (
         "American Express",
-        "https://aexp.avature.net/careers/SearchJobs/cybersecurity",
-        "h3.results-list__title a, .job-title a, h3",
-        ".job-location, .location",
-        "h3.results-list__title a, a[href*='/careers/']",
+        "https://aexp.eightfold.ai/careers?query=cybersecurity",
+        "[class*='job-title'], [class*='JobTitle'], h4, h3",
+        "[class*='location'], [class*='Location']",
+        "a[href*='/careers/jobs/']",
     ),
     (
         "Citigroup",
