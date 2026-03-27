@@ -27,6 +27,14 @@ GREENHOUSE_COMPANIES = {
     "okta": "Okta",
     "huntress": "Huntress",
     "bugcrowd": "Bugcrowd",
+    "palantir": "Palantir",
+    "zscaler": "Zscaler",
+    "sentinelone": "SentinelOne",
+    "rapid7": "Rapid7",
+    "tenable": "Tenable",
+    "databricks": "Databricks",
+    "hackerone": "HackerOne",
+    "dragos": "Dragos",
 }
 
 # Companies using Lever ATS (verified slugs)
